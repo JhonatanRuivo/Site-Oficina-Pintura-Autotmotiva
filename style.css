@@ -1,26 +1,76 @@
 :root {
-  --white: #E6E6E6;
-  --black: #0D0D0D;
-  --gray-100: #D7D7D7;
-  --gray-300: #A9A9A9;
-  --gray-700: #3E3E40;
-  --blue-100: #22B7F2;
-  --blue-300: #22A2F2;
-  --blue-500: #2793F2;
-  --blue-700: #147CA5;
-  
-  --font-pt-serif: 'PT Serif', serif;
+	--white: #e6e6e6;
+	--black: #0d0d0d;
+	--gray-100: #d7d7d7;
+	--gray-300: #a9a9a9;
+	--gray-700: #3e3e40;
+	--blue-100: #22b7f2;
+	--blue-300: #22a2f2;
+	--blue-500: #2793f2;
+	--blue-700: #147ca5;
+
+	--font-pt-serif: "PT Serif", serif;
+	--font-montserrat: "Montserrat", sans-serif;
+ 
+  --shadow-default: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.25);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%; /* 62.5% de 16px = 10px */
 }
 
 body {
+  padding: 2rem;
   font-size: 1.6rem;
-  background-color:var(--white);
-  font-family: 'Montserrat', sans-serif;
+	font-family: var(--font-montserrat);
+	background-color: var(--white);
+  color: var(--black);
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 4rem;
+}
+
+.welcome-section, .welcome-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.welcome-text h1 {
+  font-family: var(--font-pt-serif);
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+.welcome-text p {
+  color: var(--gray-700);
+  text-align: center;
+  line-height: 3rem;
+}
+.welcome-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.welcome-buttons button {
+  font-size: 1.6rem;
+  font-family: var(--font-montserrat);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-default);
+}
+.welcome-buttons #works {
+  color: var(--white);
+  background-color: var(--blue-100);
+  border: none;
+  border-radius: 0.4rem;
+}
+.welcome-buttons #budget {
+  color: var(--blue-300);
+  background-color: var(--white);
+  border: solid 0.1rem var(--blue-300);
+  border-radius: 0.4rem;
 }
