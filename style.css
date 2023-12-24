@@ -1,33 +1,32 @@
 :root {
-	--white: #e6e6e6;
-	--black: #0d0d0d;
-	--gray-100: #d7d7d7;
-	--gray-300: #a9a9a9;
-	--gray-700: #3e3e40;
-	--blue-100: #22b7f2;
-	--blue-300: #22a2f2;
-	--blue-500: #2793f2;
-	--blue-700: #147ca5;
+  --white: #e6e6e6;
+  --black: #0d0d0d;
+  --gray-100: #d7d7d7;
+  --gray-300: #a9a9a9;
+  --gray-700: #3e3e40;
+  --blue-100: #22b7f2;
+  --blue-300: #22a2f2;
+  --blue-500: #2793f2;
+  --blue-700: #147ca5;
 
-	--font-pt-serif: "PT Serif", serif;
-	--font-montserrat: "Montserrat", sans-serif;
- 
+  --font-pt-serif: "PT Serif", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
   --shadow-default: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.25);
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html {
-	font-size: 62.5%; /* 62.5% de 16px = 10px */
+  font-size: 62.5%; /* 62.5% de 16px = 10px */
 }
 body {
-  padding: 2rem;
   font-size: 1.6rem;
-	font-family: var(--font-montserrat);
-	background-color: var(--white);
+  font-family: var(--font-montserrat);
+  background-color: var(--white);
   color: var(--black);
 
   display: flex;
@@ -35,9 +34,21 @@ body {
   text-align: center;
   gap: 4rem;
 }
+header {
+  padding: 2rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 4rem;
+}
 
 /* Welcome section of the home page */
-.welcome-section, .welcome-text {
+.welcome-section,
+.welcome-text {
+  padding: 0 2rem;
+
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -45,13 +56,15 @@ body {
 .welcome-text h1 {
   font-family: var(--font-pt-serif);
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 .welcome-text p {
   color: var(--gray-700);
   text-align: justify;
   line-height: 3rem;
+  font-weight: 500;
 }
+
 .welcome-buttons {
   display: flex;
   justify-content: space-around;
@@ -73,4 +86,47 @@ body {
   background-color: var(--white);
   border: solid 0.1rem var(--blue-300);
   border-radius: 0.4rem;
+}
+
+/* Works section */
+.works {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+}
+.works .decorator-background {
+  position: absolute;
+  background-color: var(--gray-100);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 33%;
+  height: 70%;
+}
+.works h2 {
+  padding: 0 2rem;
+  font-size: 2.4rem;
+  font-family: var(--font-pt-serif);
+  font-weight: 400;
+}
+.works .works-cards {
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.works .work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-default);
+}
+.work-card figcaption {
+  font-weight: 700;
+  font-size: 1.4rem;
 }
