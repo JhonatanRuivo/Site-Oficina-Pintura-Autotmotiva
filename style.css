@@ -111,12 +111,13 @@ main {
   font-weight: 400;
 }
 .works .works-cards {
-  padding: 0 2rem;
+  padding: 0 2rem 2rem ;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+
 }
 .works .work-card {
   display: flex;
@@ -129,4 +130,64 @@ main {
 .work-card figcaption {
   font-weight: 700;
   font-size: 1.4rem;
+}
+
+/* Work section description */
+.description-work {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.description figure {
+  display: flex;
+  align-items: center;
+}
+.description figcaption {
+  font-family: var(--font-pt-serif);
+  font-size: 2rem;
+  font-weight: 400;
+}
+.description .description-items {
+  text-align: start;
+  margin-left: 2rem;
+  color:var(--gray-700);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  list-style-position: outside;
+}
+
+/* Work section about */
+.about {
+  background-color: var(--gray-100);
+  padding: 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about h2 {
+  font-size: 2.4rem;
+  font-family: var(--font-pt-serif);
+  font-weight: 400;
+}
+.about p {
+  font-size: 1.4rem;
+  text-align: justify;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+.pictures-about-work {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Work section about */
+footer {
+  padding: 0 2rem;
 }
