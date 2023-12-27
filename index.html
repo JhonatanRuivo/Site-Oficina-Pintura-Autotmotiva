@@ -24,7 +24,7 @@
   </header>
 
   <main>
-    <section class="welcome-section">
+    <section class="welcome-section" data-animation="show">
       <div class="welcome-text">
         <h1>Bem Vindo!</h1>
         <p>É um prazer recebê-lo em nosso site, onde a qualidade e o cuidado se encontram para transformar o seu veículo em uma
@@ -32,12 +32,13 @@
           merece.</p>
       </div>
       <div class="welcome-buttons">
-        <button id="works">Ver Trabalhos</button>
+        
+        <a href="#descriptionWorks"><button id="works">Ver Trabalhos</button></a>
         <button id="budget">Orçamento</button>
       </div>
     </section>
 
-    <section class="works">
+    <section class="works" data-animation="upwards">
       <div class="decorator-background"></div>
       <h2>O que fazemos</h2>
       <div class="works-cards">
@@ -60,8 +61,8 @@
       </div>
     </section>
 
-    <section class="description-work">
-      <div class="description">
+    <section class="description-work" id="descriptionWorks">
+      <div class="description" data-animation="left">
         <figure>
           <img src="./public/funilaria-mobile-description.png" alt="">
           <figcaption>Reparação de Danos na Lataria</figcaption>
@@ -75,7 +76,7 @@
         </ul>
       </div>
 
-      <div class="description">
+      <div class="description" data-animation="rigth">
         <figure>
           <img src="./public/preparacao-mobile-description.png" alt="">
           <figcaption>Preparação da Superfície</figcaption>
@@ -88,7 +89,7 @@
         </ul>
       </div>
 
-      <div class="description">
+      <div class="description" data-animation="left">
         <figure>
           <img src="./public/pintura-mobile-description.png" alt="">
           <figcaption>Pintura Automotiva</figcaption>
@@ -100,7 +101,7 @@
         </ul>
       </div>
 
-      <div class="description">
+      <div class="description" data-animation="rigth">
         <figure>
           <img src="./public/acabamento-mobile-description.png" alt="">
           <figcaption>Polimento e Acabamento</figcaption>
@@ -112,7 +113,7 @@
         </ul>
       </div>
 
-      <div class="description">
+      <div class="description" data-animation="left">
         <figure>
           <img src="./public/servicos-mobile-description.png" alt="">
           <figcaption>Serviços Adicionais</figcaption>
@@ -126,7 +127,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" data-animation="upwards">
       <h2>Sobre nós</h2>
       <p>Nossa oficina conta com profissionais especializados em funilaria e pintura, além de equipamentos específicos para cada
       etapa do processo. A qualidade do trabalho é crucial para garantir que o veículo recupere sua aparência original e, ao
@@ -141,20 +142,50 @@
 
   </main>
 
-  <footer>
+  <footer data-animation="show-scroll">
     <div class="contact">
       <h2>LEANDRO PINTURA AUTOMOTIVA</h2>
-      <ul>
-        <li>Ouro Branco, 41 - Novo Horizonte - Carambeí /PR</li>
-        <li><a href="#">(42) 99921-0080</a></li>
-        <li><a href="#">(42) 99921-0080</a></li>
-      </ul>
+      <div class="contact-list">
+        <div class="items-contact" id="adress">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
+            <path
+              d="M5.6 3.6C6.13043 3.6 6.63914 3.81071 7.01421 4.18579C7.38929 4.56086 7.6 5.06957 7.6 5.6C7.6 5.86264 7.54827 6.12272 7.44776 6.36537C7.34725 6.60802 7.19993 6.8285 7.01421 7.01421C6.8285 7.19993 6.60802 7.34725 6.36537 7.44776C6.12272 7.54827 5.86264 7.6 5.6 7.6C5.06957 7.6 4.56086 7.38929 4.18579 7.01421C3.81071 6.63914 3.6 6.13043 3.6 5.6C3.6 5.06957 3.81071 4.56086 4.18579 4.18579C4.56086 3.81071 5.06957 3.6 5.6 3.6ZM5.6 0C7.08521 0 8.50959 0.589998 9.5598 1.6402C10.61 2.69041 11.2 4.11479 11.2 5.6C11.2 9.8 5.6 16 5.6 16C5.6 16 0 9.8 0 5.6C0 4.11479 0.589998 2.69041 1.6402 1.6402C2.69041 0.589998 4.11479 0 5.6 0ZM5.6 1.6C4.53913 1.6 3.52172 2.02143 2.77157 2.77157C2.02143 3.52172 1.6 4.53913 1.6 5.6C1.6 6.4 1.6 8 5.6 13.368C9.6 8 9.6 6.4 9.6 5.6C9.6 4.53913 9.17857 3.52172 8.42843 2.77157C7.67828 2.02143 6.66087 1.6 5.6 1.6Z"
+              fill="#2793F2" />
+          </svg>
+          <a href="#">Ouro Branco, 41 - Novo Horizonte - Carambeí /PR</a>
+        </div>
+
+        <div class="items-contact" id="fone-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+            <path
+              d="M2.896 6.92444C4.048 9.44 5.904 11.5022 8.168 12.7822L9.928 10.8267C10.152 10.5778 10.464 10.5067 10.744 10.6044C11.64 10.9333 12.6 11.1111 13.6 11.1111C13.8122 11.1111 14.0157 11.2048 14.1657 11.3715C14.3157 11.5382 14.4 11.7643 14.4 12V15.1111C14.4 15.3469 14.3157 15.573 14.1657 15.7397C14.0157 15.9064 13.8122 16 13.6 16C9.99306 16 6.53384 14.4079 3.98335 11.5741C1.43285 8.74017 0 4.89661 0 0.888889C0 0.653141 0.0842854 0.427048 0.234315 0.260349C0.384344 0.0936505 0.587827 0 0.8 0H3.6C3.81217 0 4.01566 0.0936505 4.16569 0.260349C4.31571 0.427048 4.4 0.653141 4.4 0.888889C4.4 2 4.56 3.06667 4.856 4.06222C4.944 4.37333 4.88 4.72 4.656 4.96889L2.896 6.92444Z"
+              fill="#2793F2" />
+          </svg>
+          <a href="#">(42) 99921-0080</a>
+        </div>
+
+        <div class="items-contact" id="fone-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M7.992 0C3.624 0 0.0640001 3.56 0.0640001 7.928C0.0640001 9.328 0.432 10.688 1.12 11.888L0 16L4.2 14.896C5.36 15.528 6.664 15.864 7.992 15.864C12.36 15.864 15.92 12.304 15.92 7.936C15.92 5.816 15.096 3.824 13.6 2.328C12.104 0.824 10.112 0 7.992 0ZM8 1.336C9.76 1.336 11.408 2.024 12.656 3.272C13.896 4.52 14.584 6.176 14.584 7.936C14.584 11.568 11.624 14.52 7.992 14.52C6.808 14.52 5.648 14.208 4.64 13.6L4.4 13.464L1.904 14.12L2.568 11.688L2.408 11.432C1.752 10.4 1.4 9.176 1.4 7.928C1.408 4.296 4.36 1.336 8 1.336ZM5.184 4.264C5.056 4.264 4.84 4.312 4.656 4.512C4.48 4.712 3.96 5.2 3.96 6.168C3.96 7.144 4.672 8.08 4.76 8.216C4.872 8.352 6.168 10.352 8.16 11.2C8.632 11.416 9 11.536 9.288 11.624C9.76 11.776 10.192 11.752 10.536 11.704C10.92 11.648 11.704 11.224 11.872 10.76C12.04 10.296 12.04 9.904 11.992 9.816C11.936 9.736 11.808 9.688 11.608 9.6C11.408 9.488 10.432 9.008 10.256 8.944C10.072 8.88 9.96 8.848 9.808 9.04C9.68 9.24 9.296 9.688 9.184 9.816C9.064 9.952 8.952 9.968 8.76 9.872C8.552 9.768 7.912 9.56 7.16 8.888C6.568 8.36 6.176 7.712 6.056 7.512C5.96 7.32 6.048 7.2 6.144 7.112C6.232 7.024 6.36 6.88 6.44 6.76C6.544 6.648 6.576 6.56 6.64 6.432C6.704 6.296 6.672 6.184 6.624 6.088C6.576 6 6.176 5.008 6.008 4.616C5.848 4.232 5.688 4.28 5.56 4.272C5.448 4.272 5.32 4.264 5.184 4.264Z"
+              fill="#2793F2" />
+          </svg>
+          <a href="#">(42) 99921-0080</a>
+        </div>
+      </div>
     </div>
+
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.4554719248954!2d-50.124192325035544!3d-24.950613614096056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e822481dbe0c95%3A0x933a3d043e2d09bf!2sRua%20Ouro%20Branco%2C%2041%2C%20Carambe%C3%AD%20-%20PR%2C%2084145-000!5e0!3m2!1spt-BR!2sbr!4v1703514982287!5m2!1spt-BR!2sbr"
-      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      width="100%" height="355" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </footer>
+  
+  <div class="copyright">
+    <strong>Leandro Pintura Automotiva</strong>
+    <p>© 2023 - Todos os direitos reservados.</p>
+  </div>
 </body>
 
 </html>

@@ -22,6 +22,7 @@
 }
 html {
   font-size: 62.5%; /* 62.5% de 16px = 10px */
+  scroll-behavior: smooth;
 }
 body {
   font-size: 1.6rem;
@@ -36,6 +37,8 @@ body {
 }
 header {
   padding: 2rem;
+  animation-name: show-scroll;
+  animation-duration: 250ms;
 }
 main {
   display: flex;
@@ -52,6 +55,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+
+  animation-name: show-scroll;
+  animation-duration: 250ms;
 }
 .welcome-text h1 {
   font-family: var(--font-pt-serif);
@@ -64,7 +70,6 @@ main {
   line-height: 3rem;
   font-weight: 500;
 }
-
 .welcome-buttons {
   display: flex;
   justify-content: space-around;
@@ -93,7 +98,9 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2rem; 
+  gap: 2rem;
+  animation-name: show-scroll;
+  animation-duration: 250ms;
 }
 .works .decorator-background {
   position: absolute;
@@ -111,13 +118,12 @@ main {
   font-weight: 400;
 }
 .works .works-cards {
-  padding: 0 2rem 2rem ;
+  padding: 0 2rem 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
   justify-content: space-around;
-
 }
 .works .work-card {
   display: flex;
@@ -138,6 +144,8 @@ main {
   flex-direction: column;
   gap: 2rem;
   padding: 0 2rem;
+  animation-name: show-left-to-right;
+  animation-duration: 500ms;
 }
 .description {
   display: flex;
@@ -156,7 +164,7 @@ main {
 .description .description-items {
   text-align: start;
   margin-left: 2rem;
-  color:var(--gray-700);
+  color: var(--gray-700);
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 2rem;
@@ -166,7 +174,7 @@ main {
 /* Work section about */
 .about {
   background-color: var(--gray-100);
-  padding: 2rem 2rem 0;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -187,7 +195,123 @@ main {
   justify-content: space-between;
 }
 
-/* Work section about */
+/* Contact section */
 footer {
   padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: start;
+}
+.contact-list a {
+  text-decoration: none;
+  color: var(--gray-700);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.contact-list .items-contact {
+  display: flex;
+  gap: 1rem;
+}
+iframe {
+  box-shadow: var(--shadow-default);
+  border-radius: 0.8rem;
+}
+
+/* Copyright */
+.copyright {
+  background-color: var(--gray-300);
+  color: var(--gray-700);
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  justify-content: space-around;
+}
+.copyright strong {
+  font-size: 1.4rem;
+  max-width: 35%;
+}
+.copyright p {
+  font-size: 1.2rem;
+}
+
+/* Animations */
+[data-animation="upwards"] {
+  animation: upwards;
+  animation-timeline: view();
+}
+[data-animation="left"] {
+  animation: left ;
+  animation-timeline: view(70% auto);
+}
+[data-animation="rigth"] {
+  animation: right ;
+  animation-timeline: view(70% auto);
+}
+[data-animation="show"] {
+  animation: show 500ms;
+}
+[data-animation="show-scroll"] {
+  animation: show-scroll;
+  animation-timeline: view(70% auto);
+}
+
+@keyframes upwards {
+  from {
+    transform: translateY(10vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes left {
+  from {
+    opacity: 0.3;
+    translate: -100vw 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+@keyframes right {
+  from {
+    opacity: 0.3;
+    translate: 100vw 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    filter: blur(2.5rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show-scroll {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
 }
