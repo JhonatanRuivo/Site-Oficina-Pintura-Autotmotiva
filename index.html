@@ -20,22 +20,33 @@
     <div class="logo">
       <img src="./public/logo.svg" alt="logo da oficina">
     </div>
-    <nav></nav>
+    <nav class="navigation-links">
+      <ul>
+        <li id="link-home"><a href="#">Início</a></li>
+        <li id="link-about"><a href="#aboutUs">Sobre nós</a></li>
+        <li id="link-works"><a href="#descriptionWorks">Trabalhos</a></li>
+        <li id="link-contact"><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
     <section class="welcome-section" data-animation="show">
-      <div class="welcome-text">
-        <h1>Bem Vindo!</h1>
-        <p>É um prazer recebê-lo em nosso site, onde a qualidade e o cuidado se encontram para transformar o seu veículo em uma
-          verdadeira obra-prima sobre rodas. Na nossa oficina, cada carro é tratado com a atenção e o profissionalismo que
-          merece.</p>
-      </div>
-      <div class="welcome-buttons">
+      <div class="welcome-left">
+        <div class="welcome-text">
+          <h1>Bem Vindo!</h1>
+          <p>É um prazer recebê-lo em nosso site, onde a qualidade e o cuidado se encontram para transformar o seu veículo em
+            uma
+            verdadeira obra-prima sobre rodas. Na nossa oficina, cada carro é tratado com a atenção e o profissionalismo que
+            merece.</p>
+        </div>
+        <div class="welcome-buttons">
         
-        <a href="#descriptionWorks"><button id="works">Ver Trabalhos</button></a>
-        <a href=" https://wa.me/5542999210080"><button id="budget">Orçamento</button></a>
+          <a href="#descriptionWorks"><button id="works">Ver Trabalhos</button></a>
+          <a href=" https://wa.me/5542999210080"><button id="budget">Orçamento</button></a>
+        </div>
       </div>
+      <img src="/public/image-home.png" alt="Imagem da frente de um carro azul">
     </section>
 
     <section class="works" data-animation="upwards">
@@ -76,7 +87,7 @@
         </ul>
       </div>
 
-      <div class="description" data-animation="rigth">
+      <div class="description" data-animation="right">
         <figure>
           <img src="./public/preparacao-mobile-description.png" alt="">
           <figcaption>Preparação da Superfície</figcaption>
@@ -101,7 +112,7 @@
         </ul>
       </div>
 
-      <div class="description" data-animation="rigth">
+      <div class="description" data-animation="right">
         <figure>
           <img src="./public/acabamento-mobile-description.png" alt="">
           <figcaption>Polimento e Acabamento</figcaption>
@@ -127,7 +138,7 @@
       </div>
     </section>
 
-    <section class="about" data-animation="upwards">
+    <section id="aboutUs" class="about" data-animation="upwards">
       <h2>Sobre nós</h2>
       <p>Nossa oficina conta com profissionais especializados em funilaria e pintura, além de equipamentos específicos para cada
       etapa do processo. A qualidade do trabalho é crucial para garantir que o veículo recupere sua aparência original e, ao
@@ -143,7 +154,7 @@
   </main>
 
   <footer data-animation="show-scroll">
-    <div class="contact">
+    <div id="contact" class="contact">
       <h2>LEANDRO PINTURA AUTOMOTIVA</h2>
       <div class="contact-list">
         <div class="items-contact" id="adress">

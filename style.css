@@ -40,6 +40,9 @@ header {
   animation-name: show-scroll;
   animation-duration: 250ms;
 }
+header .navigation-links {
+  display: none;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -48,6 +51,11 @@ main {
 }
 
 /* Welcome section of the home page */
+.welcome-section .welcome-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 .welcome-section,
 .welcome-text {
   padding: 0 2rem;
@@ -91,6 +99,9 @@ main {
   background-color: var(--white);
   border: solid 0.1rem var(--blue-300);
   border-radius: 0.4rem;
+}
+.welcome-section img {
+  display: none;
 }
 
 /* Works section */
@@ -218,10 +229,12 @@ footer {
   text-align: start;
 }
 .contact-list a {
-  text-decoration: none;
   color: var(--gray-700);
   font-size: 1.2rem;
   font-weight: 500;
+}
+.contact-list a:hover {
+  color: var(--blue-100);
 }
 .contact-list .items-contact {
   display: flex;
@@ -255,11 +268,11 @@ iframe {
   animation-timeline: view();
 }
 [data-animation="left"] {
-  animation: left ;
+  animation: left;
   animation-timeline: view(70% auto);
 }
-[data-animation="rigth"] {
-  animation: right ;
+[data-animation="right"] {
+  animation: right;
   animation-timeline: view(70% auto);
 }
 [data-animation="show"] {
@@ -313,5 +326,74 @@ iframe {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* min width 425px */
+@media (min-width: 425px) {
+  /* Work section description */
+  .works .decorator-background {
+    height: 50%;
+    top: 50%;
+  }
+
+  /* Work section description */
+  .description figure {
+    justify-content: space-around;
+  }
+}
+
+/* min width 768px */
+@media (min-width: 768px) {
+  header {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .navigation-links {
+    display: block;
+  }
+  header .navigation-links ul {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  header .navigation-links li a {
+    text-decoration: none;
+    color: var(--gray-700);
+  }
+  header .navigation-links li a:hover {
+    font-weight: 700;
+  }
+
+  /* Welcome section of the home page */
+  .welcome-section {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .welcome-left {
+    justify-content: space-evenly;
+  }
+  .welcome-section img {
+    display: block;
+    max-width: 584px;
+    max-height: 577px;
+  }
+  .welcome-text {
+    max-width: 33vw;
+  }
+  .welcome-text h1 {
+    font-size: 6rem;
+  }
+  .welcome-text p {
+    font-size: 2.4rem;
+  }
+  .welcome-buttons button {
+  font-size: 2.2rem;
+  font-family: var(--font-montserrat);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow-default);
   }
 }
