@@ -330,8 +330,8 @@ iframe {
   }
 }
 
-/* min width 425px */
-@media (min-width: 425px) {
+/* min width 426px */
+@media (min-width: 426px) {
   /* Work section description */
   .works .decorator-background {
     height: 50%;
@@ -344,8 +344,8 @@ iframe {
   }
 }
 
-/* min width 768px */
-@media (min-width: 768px) {
+/* min width 1024 */
+@media (min-width: 1024px) {
   header {
     padding: 4rem;
     display: flex;
@@ -353,12 +353,12 @@ iframe {
   }
 
   header .navigation-links {
-    display: block;
+    display: flex;
   }
   header .navigation-links ul {
     width: 50vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style: none;
   }
   header .navigation-links li a {
@@ -372,15 +372,15 @@ iframe {
   /* Welcome section of the home page */
   .welcome-section {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   .welcome-left {
     justify-content: space-evenly;
   }
   .welcome-section img {
     display: block;
-    max-width: 584px;
-    max-height: 577px;
+    max-width: 58.4rem;
+    max-height: 57.7rem;
   }
   .welcome-text {
     max-width: 33vw;
@@ -392,7 +392,7 @@ iframe {
     font-size: 2.4rem;
   }
   .welcome-buttons button {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-family: var(--font-montserrat);
     padding: 1rem 1.5rem;
     box-shadow: var(--shadow-default);
