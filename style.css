@@ -117,7 +117,7 @@ main {
   position: absolute;
   background-color: var(--gray-100);
   width: 100%;
-  height: 100%;
+  height: 70%;
   z-index: -1;
   top: 33%;
 }
@@ -133,6 +133,8 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  gap: 2rem;
+
 }
 .works .work-card {
   display: flex;
@@ -169,11 +171,20 @@ main {
 .description figure {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+}
+.description figure img {
+  height: 10.8rem;
+  width: 10.8rem;
+  border-radius: 50%;
 }
 .description figcaption {
   font-family: var(--font-pt-serif);
   font-size: 2rem;
   font-weight: 400;
+}
+.description h1 {
+  display: none;
 }
 .description .description-items {
   text-align: start;
@@ -339,11 +350,6 @@ iframe {
     height: 50%;
     top: 50%;
   }
-
-  /* Work section description */
-  .description figure {
-    justify-content: space-around;
-  }
 }
 
 /* min width 1024px */
@@ -418,4 +424,71 @@ iframe {
   .work-card figcaption {
     font-size: 2.4rem;
   }
+
+  /* Work section description - min width 1024px */
+  .description-work {
+    gap: 6rem;
+  }
+  .description {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  [data-animation="right"] {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .description figure img {
+    width: 58.4rem;
+    height: 38.1rem;
+    border-radius: 0.4rem;
+    box-shadow: var(--shadow-default);
+  }
+  .description figure figcaption {
+    display: none;
+  }
+  .description h1 {
+    display: block;
+    font-weight: 400;
+    font-family: var(--font-pt-serif);
+    font-size: 4rem;
+  }
+  .description .description-text {
+    display: flex;
+    max-width: 40%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .description .description-items {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 160%;
+    text-align: justify;
+  }
+
+  /* Work section about - min width 1024px */
+  .about {
+    padding: 4rem 2rem;
+    gap: 6rem;
+  }
+  .about h2 {
+    font-size: 4.8rem;
+  }
+  .about p {
+    font-size: 2.4rem;
+    max-width: 66%;
+    text-align: justify;
+    margin: auto;
+  }
+  .pictures-about-work {
+    justify-content: space-evenly;
+  }
+
+  /* Contact section - min width 1024px */
+  footer {
+    gap: 6rem;
+  }
+  .contac {
+    gap: 4rem;
+  }
+
 }
